@@ -1,0 +1,224 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Yuki's Blog | Yuki's Blog</title><meta name="author" content="Yuki"><meta name="copyright" content="Yuki"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="123456title: 命令行工具date: 2020-11-12 15:52:32categories:     - 工具tags:     - 命令行工具  命令行工具annie视频下载工具，Github 地址 ffmpeg视频音频处理工具，官网地址 iconutilmac 自带工具，可用于制作 Mac App 的 .icns 图标，支持 .icn 图标和 .iconset 的互相转换，.i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Yuki&#39;s Blog">
+<meta property="og:url" content="http://hg2990656.github.io/2020/11/12/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="Yuki&#39;s Blog">
+<meta property="og:description" content="123456title: 命令行工具date: 2020-11-12 15:52:32categories:     - 工具tags:     - 命令行工具  命令行工具annie视频下载工具，Github 地址 ffmpeg视频音频处理工具，官网地址 iconutilmac 自带工具，可用于制作 Mac App 的 .icns 图标，支持 .icn 图标和 .iconset 的互相转换，.i">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png">
+<meta property="article:published_time" content="2020-11-12T05:39:24.062Z">
+<meta property="article:modified_time" content="2020-11-12T07:56:46.051Z">
+<meta property="article:author" content="Yuki">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hg2990656.github.io/2020/11/12/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-12 15:56:46'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/yukimatsui.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yuki's Blog</a></span><span id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-11-12T05:39:24.062Z" title="发表于 2020-11-12 13:39:24">2020-11-12</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-12T07:56:46.051Z" title="更新于 2020-11-12 15:56:46">2020-11-12</time></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">title: 命令行工具</span><br><span class="line">date: 2020-11-12 15:52:32</span><br><span class="line">categories:</span><br><span class="line">     - 工具</span><br><span class="line">tags:</span><br><span class="line">     - 命令行工具</span><br></pre></td></tr></table></figure>
+
+<h2 id="命令行工具"><a href="#命令行工具" class="headerlink" title="命令行工具"></a>命令行工具</h2><h3 id="annie"><a href="#annie" class="headerlink" title="annie"></a>annie</h3><p>视频下载工具，<a target="_blank" rel="noopener" href="https://github.com/iawia002/annie">Github 地址</a></p>
+<h3 id="ffmpeg"><a href="#ffmpeg" class="headerlink" title="ffmpeg"></a>ffmpeg</h3><p>视频音频处理工具，<a target="_blank" rel="noopener" href="https://www.ffmpeg.org/">官网地址</a></p>
+<h3 id="iconutil"><a href="#iconutil" class="headerlink" title="iconutil"></a>iconutil</h3><p>mac 自带工具，可用于制作 Mac App 的 .icns 图标，支持 .icn 图标和 .iconset 的互相转换，.iconset 是包含了多种尺寸的图标集合，查看使用介绍：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man iconutil</span><br></pre></td></tr></table></figure>
+
+<h4 id="iconset-转-icn"><a href="#iconset-转-icn" class="headerlink" title="iconset 转 icn"></a>iconset 转 icn</h4><ol>
+<li><p>准备 png 文件(示例中是 <code>logo.png</code>，分辨率 1024 * 1024)</p>
+</li>
+<li><p>同级目录新建文件夹 <code>icons.iconset</code></p>
+</li>
+<li><p>终端执行命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sips -z 16 16     logo.png --out icons.iconset&#x2F;icon_16x16.png</span><br><span class="line">sips -z 32 32     logo.png --out icons.iconset&#x2F;icon_16x16@2x.png</span><br><span class="line">sips -z 32 32     logo.png --out icons.iconset&#x2F;icon_32x32.png</span><br><span class="line">sips -z 64 64     logo.png --out icons.iconset&#x2F;icon_32x32@2x.png</span><br><span class="line">sips -z 128 128   logo.png --out icons.iconset&#x2F;icon_128x128.png</span><br><span class="line">sips -z 256 256   logo.png --out icons.iconset&#x2F;icon_128x128@2x.png</span><br><span class="line">sips -z 256 256   logo.png --out icons.iconset&#x2F;icon_256x256.png</span><br><span class="line">sips -z 512 512   logo.png --out icons.iconset&#x2F;icon_256x256@2x.png</span><br><span class="line">sips -z 512 512   logo.png --out icons.iconset&#x2F;icon_512x512.png</span><br><span class="line">sips -z 1024 1024   logo.png --out icons.iconset&#x2F;icon_512x512@2x.png</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>终端执行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iconutil -c icns icons.iconset -o icon.icns</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<h4 id="icn-转-iconset"><a href="#icn-转-iconset" class="headerlink" title="icn 转 iconset"></a>icn 转 iconset</h4><p>1.找到应用程序中任意一个应用，显示包内容，应用的图标在 resource 文件夹内，将 .icn 文件转为不同尺寸的图标集合：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">iconutil -c iconset 163Music.icns -o icons.iconset</span><br></pre></td></tr></table></figure>
+
+<p>得到的 icons.iconset 文件夹中包含网易云音乐的各个尺寸大小图标。</p>
+<p>说明</p>
+<ol>
+<li><p>通过 <code>man sips</code> 可以查看 <code>sips</code> 命令的介绍和使用说明：图片处理工具，可以得到对应尺寸的图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">This tool is used to query or modify raster image files and ColorSync ICC profiles.</span><br><span class="line"></span><br><span class="line">sips [image-modification-functions] imagefile ...</span><br><span class="line">     [--out result-file-or-dir]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>通过 <code>man iconutil</code> 可以查看 <code>iconutil</code> 的介绍和使用说明：将多个图片打包成 <code>.icns</code> 文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">iconutil converts between &#39;.iconset&#39; and &#39;.icns&#39; files.</span><br><span class="line"></span><br><span class="line">iconutil -c &#123;icns | iconset&#125; [-o file] file</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<h3 id="imageMagick"><a href="#imageMagick" class="headerlink" title="imageMagick"></a><a target="_blank" rel="noopener" href="http://www.imagemagick.org/">imageMagick</a></h3><p>用于创建、编辑、合成图片。可以读取、转换、写入多种格式的图片。图片切割、颜色替换、各种效果的应用，图片的旋转、组合，文本，直线，多边形，椭圆，曲线，附加到图片伸展旋转。</p>
+<p><strong>示例</strong></p>
+<p>使用 imagemagick 拼接图片：<br>执行如下命令：将 a.jpg 放到 test.jpg 图片的中间位置（center控制）并保存为 b_over.gif 格式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">composite -gravity center a.jpg test.jpg b_over.gif</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">convert test.jpg a.jpg -geometry +75+180 -composite d_over.jpg</span><br></pre></td></tr></table></figure>
+
+<p>通过convert命令的 -geometry 两个参数来控制目标图片位置，+75 代表将 a.jpg 的左顶点放到 test.jpg 左顶点向左 75 pix，向下180 pix。</p>
+<p>与ImageMagick功能类似的还有GraphicsMagick，GraphicsMagick号称图像处理领域的瑞士军刀。 短小精悍的代码却提供了一个鲁棒、高效的工具和库集合，来处理图像的读取、写入和操作，支持超过88种图像格式，包括重要的DPX、GIF、JPEG、JPEG-2000、PNG、PDF、PNM和TIFF。</p>
+<p><a target="_blank" rel="noopener" href="http://www.graphicsmagick.org/">GraphicsMagick官网</a></p>
+<h3 id="nativefier"><a href="#nativefier" class="headerlink" title="nativefier"></a>nativefier</h3><p>基于 electron 开发的，可将任意的网页转成一个电脑客户端。例如：b 站，github，知乎，微信阅读等。<a target="_blank" rel="noopener" href="https://github.com/jiahaog/nativefier/">Github 地址</a></p>
+<p>需要安装 Node.js 6.0 以上版本。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g nativefier</span><br></pre></td></tr></table></figure>
+
+<p>制作 Github 应用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nativefier --name Github https:&#x2F;&#x2F;www.github.com</span><br></pre></td></tr></table></figure>
+
+<p>使用自定义 .icns 图标：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 使用png时先使用brew安装imagemagick</span><br><span class="line">nativefier --name Github --icon .&#x2F;github.png https:&#x2F;&#x2F;www.github.com</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 直接使用.icns图标</span><br><span class="line">nativefier --name Github --icon .&#x2F;github.icns https:&#x2F;&#x2F;www.github.com</span><br></pre></td></tr></table></figure>
+
+<p>nativefier 维护的默认图标 icons 地址 <a target="_blank" rel="noopener" href="https://github.com/jiahaog/nativefier-icons">nativefier-icons</a></p>
+<h3 id="ncm"><a href="#ncm" class="headerlink" title="ncm"></a>ncm</h3><p>将网易云加密的 .ncm 文件转为 .mp3 文件，<a target="_blank" rel="noopener" href="https://github.com/eson-sheng/ncmdump">Github 地址</a></p>
+<p>使用步骤：</p>
+<ul>
+<li><p>从<code>GitHub</code>仓库中克隆项目</p>
+</li>
+<li><p>下载扩展库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">brew search taglib</span><br><span class="line"></span><br><span class="line">brew install taglib</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编译执行文件：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd .&#x2F;ncmdump</span><br><span class="line">make install</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>转换音乐：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ncmdump .&#x2F;*.ncm</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ul>
+<h3 id="tinys"><a href="#tinys" class="headerlink" title="tinys"></a>tinys</h3><p>图片压缩工具，可以将单张图片或者图片文件夹进行全部压缩，可以给定 web 地址进行下载和压缩，此外支持多种压缩模式，调整压缩后的图片尺寸。<a target="_blank" rel="noopener" href="https://github.com/hg2990656/tinys">Github 地址</a></p>
+<h3 id="youtube-dl"><a href="#youtube-dl" class="headerlink" title="youtube-dl"></a>youtube-dl</h3><p>视频下载工具，可配合播放器使用直接播放网上视频资源。<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1h4AX1XouNxHphOX-5bUysw">下载地址</a></p>
+<p>提取码：bxwg</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yuki</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://hg2990656.github.io/2020/11/12/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/">http://hg2990656.github.io/2020/11/12/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://hg2990656.github.io" target="_blank">Yuki's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/11/12/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/"><img class="prev-cover" src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2020/11/06/hello-world/"><img class="next-cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Hello World</div></div></a></div></nav></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/yukimatsui.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yuki</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">5</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hg2990656" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:caojun2990656@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7"><span class="toc-number">1.</span> <span class="toc-text">命令行工具</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#annie"><span class="toc-number">1.1.</span> <span class="toc-text">annie</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ffmpeg"><span class="toc-number">1.2.</span> <span class="toc-text">ffmpeg</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#iconutil"><span class="toc-number">1.3.</span> <span class="toc-text">iconutil</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#iconset-%E8%BD%AC-icn"><span class="toc-number">1.3.1.</span> <span class="toc-text">iconset 转 icn</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#icn-%E8%BD%AC-iconset"><span class="toc-number">1.3.2.</span> <span class="toc-text">icn 转 iconset</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#imageMagick"><span class="toc-number">1.4.</span> <span class="toc-text">imageMagick</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#nativefier"><span class="toc-number">1.5.</span> <span class="toc-text">nativefier</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ncm"><span class="toc-number">1.6.</span> <span class="toc-text">ncm</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#tinys"><span class="toc-number">1.7.</span> <span class="toc-text">tinys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#youtube-dl"><span class="toc-number">1.8.</span> <span class="toc-text">youtube-dl</span></a></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/12/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" title="无题"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2020/11/12/%E5%9C%A8%E7%BA%BF%E5%B7%A5%E5%85%B7/" title="无题">无题</a><time datetime="2020-11-12T07:54:57.034Z" title="发表于 2020-11-12 15:54:57">2020-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/12/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/" title="无题"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/2020/11/12/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7/" title="无题">无题</a><time datetime="2020-11-12T05:39:24.062Z" title="发表于 2020-11-12 13:39:24">2020-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/06/hello-world/" title="Hello World"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/image/blog_default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Hello World"/></a><div class="content"><a class="title" href="/2020/11/06/hello-world/" title="Hello World">Hello World</a><time datetime="2020-11-06T01:55:20.793Z" title="发表于 2020-11-06 09:55:20">2020-11-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/02/babel6/" title="Babel6"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201106162605.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Babel6"/></a><div class="content"><a class="title" href="/2017/08/02/babel6/" title="Babel6">Babel6</a><time datetime="2017-08-02T06:20:32.000Z" title="发表于 2017-08-02 14:20:32">2017-08-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2017/08/01/Sequelize/" title="Sequelize"><img src="https://cdn.jsdelivr.net/gh/jerryc127/CDN@latest/cover/default_bg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Sequelize"/></a><div class="content"><a class="title" href="/2017/08/01/Sequelize/" title="Sequelize">Sequelize</a><time datetime="2017-08-01T09:20:32.000Z" title="发表于 2017-08-01 17:20:32">2017-08-01</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Yuki</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="#">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></div></body></html>
