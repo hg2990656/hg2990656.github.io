@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>网站搭建(一) 域名和服务器 | Yuki's Blog</title><meta name="keywords" content="教程,网站,nginx"><meta name="author" content="Yuki"><meta name="copyright" content="Yuki"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="本文介绍网站搭建前的预备工作，包括购买域名和服务器，以及安装服务器常用软件。  域名域名可以说是一个 IP 地址的代称，目的是为了便于记忆后者，其实质还是通过 DNS 域名系统进行解析找到对应的 ip 地址再进行数据的传输。因此如果网站只是用于自己的学习或者个人访问，域名也不是必须的。 域名使用场景总结了域名在平时学习开发过程中会用到的场景： (1) 博客图片地址 写博客或者文章时，图片的最好存">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网站搭建(一) 域名和服务器">
+<meta property="og:url" content="http://hg2990656.github.io/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%B8%80)%20%E5%9F%9F%E5%90%8D%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/index.html">
+<meta property="og:site_name" content="Yuki&#39;s Blog">
+<meta property="og:description" content="本文介绍网站搭建前的预备工作，包括购买域名和服务器，以及安装服务器常用软件。  域名域名可以说是一个 IP 地址的代称，目的是为了便于记忆后者，其实质还是通过 DNS 域名系统进行解析找到对应的 ip 地址再进行数据的传输。因此如果网站只是用于自己的学习或者个人访问，域名也不是必须的。 域名使用场景总结了域名在平时学习开发过程中会用到的场景： (1) 博客图片地址 写博客或者文章时，图片的最好存">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132308.jpg">
+<meta property="article:published_time" content="2019-11-14T01:48:30.000Z">
+<meta property="article:modified_time" content="2020-11-14T05:23:16.642Z">
+<meta property="article:author" content="Yuki">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="网站">
+<meta property="article:tag" content="nginx">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132308.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hg2990656.github.io/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%B8%80)%20%E5%9F%9F%E5%90%8D%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-11-14 13:23:16'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/yukimatsui.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132308.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yuki's Blog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">网站搭建(一) 域名和服务器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2019-11-14T01:48:30.000Z" title="发表于 2019-11-14 09:48:30">2019-11-14</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-11-14T05:23:16.642Z" title="更新于 2020-11-14 13:23:16">2020-11-14</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>10分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>本文介绍网站搭建前的预备工作，包括购买域名和服务器，以及安装服务器常用软件。</p>
+</blockquote>
+<h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p>域名可以说是一个 IP 地址的代称，目的是为了便于记忆后者，其实质还是通过 DNS 域名系统进行解析找到对应的 ip 地址再进行数据的传输。因此如果网站只是用于自己的学习或者个人访问，域名也不是必须的。</p>
+<h3 id="域名使用场景"><a href="#域名使用场景" class="headerlink" title="域名使用场景"></a>域名使用场景</h3><p>总结了域名在平时学习开发过程中会用到的场景：</p>
+<p>(1) 博客图片地址</p>
+<p>写博客或者文章时，图片的最好存储方式是存储到图床，例如：七牛云，但是七牛云只提供 30 天的测试域名，如果想要长期稳定的使用，仍然需要购买一个自己的域名。</p>
+<p>(2) 微信开发</p>
+<p>学习开发微信公众号时，配置接口时必须提供一个域名，此外开发还需要用到内网穿透，将自己本地的服务通过 80 端口暴露出去，因此域名是必备条件。</p>
+<p>(3) 网站搭建</p>
+<p>购买服务器并搭建网站后可以通过 ip 地址访问，但是如果想让更多人访问时，最好使用域名访问。</p>
+<p>(4) 博客地址</p>
+<p>如果通过 hexo + Github pages 搭建自己的博客，可以替换 Github pages 的域名，配置一个 CNAME 解析，方便用户访问。</p>
+<h3 id="域名购买"><a href="#域名购买" class="headerlink" title="域名购买"></a>域名购买</h3><p>域名可以直接在阿里云、腾讯云、百度云上购买，最主要的就是考虑要购买的域名后缀，建议购买 .com和 .cn 的域名，价格相对更贵一点，如果购买其他过于冷门的域名后缀，在域名备案时可能会有影响。</p>
+<p>需要注意的是域名购买后需要认证才能解析。</p>
+<h3 id="域名备案"><a href="#域名备案" class="headerlink" title="域名备案"></a>域名备案</h3><p>域名备案的目的就是为了防止在网上从事非法的网站经营活动，打击不良互联网信息的传播，如果网站不备案的话，很有可能被查处以后关停。但是有一种情况例外，如果域名解析的是香港服务器或者国外的服务器则无需备案，但是这些服务器相对比较贵。因此如果想要域名解析到内地的服务器则一定要备案。</p>
+<p>按照工信部2017年域名实名认证的要求，域名注册机构阿里云万网、新网、西部数码等都接到域名注册注册管理局的通知：2017年9月1日起，未完成实名认证的域名，注册局将陆续暂停解析，届时相关网站、邮箱或网络应用将无法访问，同时也不能进行新增&amp;修改解析、DNS修改及其他相关等操作；待实名认证通过后方可恢复正常。在中国，目前需要实名认证后才能使用的域名后缀包括：</p>
+<p>.com/.net /.top/.xyz/.vip /.club/.shop/.wang/.ren /.site /.我爱你/.集团/.biz/.red/.kim/.pro/.info/.mobi/.ltd/.group/.link</p>
+<p>如果你不想认证，注册即用，一是注册时避开以上域名后缀，二是用国外注册商的域名注册接口注册。</p>
+<p>在国内不需要实名认证的域名后缀有：</p>
+<p>.cc/.co/.win/.la/.us/.im/.in/.pw/.tm/.gs/.gg/.cx等。</p>
+<h2 id="服务器"><a href="#服务器" class="headerlink" title="服务器"></a>服务器</h2><p>购买服务器同样可以选择阿里云或者腾讯云，在双十一活动时价格很优惠，平均每年90元左右，以阿里云 CenOS 8 服务器为例进行说明：</p>
+<h3 id="重置密码"><a href="#重置密码" class="headerlink" title="重置密码"></a>重置密码</h3><p>可以在云服务器 ECS 面板的<code>实例与镜像</code>-&gt;<code>实例</code>中查看自己的服务器。如果没有看到，可能是左上角的地区选择和你购买的服务器区域不一致。</p>
+<p>初始密码是未知的，需要重置密码，点开服务器操作中的<code>更多</code>-&gt;<code>密码</code>-&gt;<code>重置实例密码</code>，按照要求重置密码即可。</p>
+<h3 id="安全组"><a href="#安全组" class="headerlink" title="安全组"></a>安全组</h3><p>在后续将前后端项目部署到服务器后，后台项目可能会需要启动占用 8080、3000 这些端口，但是通过浏览器 ip + 端口访问后台时会发现无法访问，因为需要设置服务器的安全组，允许这些端口被访问。</p>
+<p>点开服务器操作中的<code>更多</code> -&gt; <code>网络和安全组</code> -&gt; <code>安全组配置</code> ，会看到一个安全组列表中有一个默认的<code>普通安全组</code>，点开<code>配置规则</code>可以看到几个已经开放的端口，只需点击<code>手动添加</code>按照规则配置自己想要开放的端口即可。</p>
+<h3 id="服务器配置"><a href="#服务器配置" class="headerlink" title="服务器配置"></a>服务器配置</h3><p>服务器初始的用户名很长，先更换一个自己的用户名：<code>hostnamectl set-hostname host.example.com</code></p>
+<h4 id="配置免密登录"><a href="#配置免密登录" class="headerlink" title="配置免密登录"></a>配置免密登录</h4><p>在 Linux 系统中设置 SSH 免密登录，需要生成公共身份验证密钥并将其附加到远程主机<code>/.ssh/authorized_keys</code>文件，配置 SSH 免密登录的步骤如下：</p>
+<p>1）检查现有的 SSH 密钥对</p>
+<p>在生成新的 SSH 密钥对之前，首先检查主机上是否已有 SSH 密钥，主要是为了不覆盖现有密钥。运行以下 Is 命令以查看是否存在现有 SSH 密钥：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ls</span> <span class="literal">-al</span> ~/.ssh/id_*.pub</span><br></pre></td></tr></table></figure>
+
+<p>如果存在现有密钥，可以使用这些密钥并<strong>跳过下一步</strong>，或备份旧密钥并生成新密钥。如果看到<code>No such file or directory</code>或<code>no matches found</code>意味着没有 SSH 密钥，则可以继续执行下一步并生成新密钥。</p>
+<p>2）生成新的 SSH 密钥对</p>
+<p>以下命令将生成一个新的 4096 位 SSH 密钥对，并将电子邮件地址作为注释：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh<span class="literal">-keygen</span> <span class="literal">-t</span> rsa <span class="literal">-b</span> <span class="number">4096</span> <span class="literal">-C</span> Email</span><br></pre></td></tr></table></figure>
+
+<p>按 Enter 接受则默认文件位置和文件名：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter file <span class="keyword">in</span> which to save the key（/home/yourusername/.ssh/id_rsa）：</span><br></pre></td></tr></table></figure>
+
+<p>接下来，ssh-keygen 工具将要求键入安全密码，无论是否想要使用密码短语都可以，如果选择使用密码短语，将获得额外的安全保护。在大多数情况下，开发人员和系统管理员使用 SSH 而不使用密码，因为它们对完全自动化的流程很有用。如果不想使用密码短语，请按 Enter：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Enter passphrase（empty <span class="keyword">for</span> no passphrase）：</span><br></pre></td></tr></table></figure>
+
+<p>可在<code>~/.ssh</code>目录下查看密钥，其中公共密钥为<code>id_rsa.pub</code></p>
+<p>3）复制公钥</p>
+<p>现在已经生成了 SSH 密钥对，为了能够在没有密码的情况下登录到主机，需要将公钥复制到要管理的主机。将公钥复制到主机的最简单方法是使用名为的命令 ssh-copy-id 。在本地主机终端类型：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh<span class="literal">-copy</span><span class="literal">-id</span> remote_username@server_ip_address</span><br></pre></td></tr></table></figure>
+
+<p>系统将提示输入 remote_username 的密码：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">remote_username@server_ip_address<span class="string">&#x27;s password:</span></span><br></pre></td></tr></table></figure>
+
+<p>用户通过身份验证后，公钥将附加到远程用户<code>authorized_keys</code>文件，并且将关闭连接。如果由于某种原因， ssh-copy-id 本地主机上没有该实用程序，则可以使用以下命令复制公钥：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cat</span> ~/.ssh/id_rsa.pub | ssh remote_username@server_ip_address <span class="string">&quot;mkdir -p ~/.ssh &amp;&amp; cat &gt;&gt; ~/.ssh/authorized_keys&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>4）使用 SSH 密钥登录</p>
+<p>完成上述步骤后，就能够登录到远程主机而不会被提示输入密码，测试口令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh remote_username@server_ip_address</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置连接心跳"><a href="#配置连接心跳" class="headerlink" title="配置连接心跳"></a>配置连接心跳</h4><p>在使用终端软件 用 ssh 连接服务器时可能会遇到长时间不操作就会卡死的情况，卡死是因为 LIUNX 安全设置问题，在一段时间内没有使用数据的情况下会自动断开，解决方法就是让本地或者服务器隔一段时间发送一个请求给对方即可。</p>
+<p>在本地打开配置文件（不建议在server端设置）</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vim /etc/ssh/ssh_config</span><br></pre></td></tr></table></figure>
+
+<p>在最下方添加以下参数，如果有直接修改：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ServerAliveInterval <span class="number">50</span> <span class="comment"># 每隔50秒就向服务器发送一个请求</span></span><br><span class="line">ServerAliveCountMax <span class="number">3</span>  <span class="comment"># 允许超时的次数，一般都会响应</span></span><br></pre></td></tr></table></figure>
+
+<p>修改完之后重启一下 ssh 服务：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo /etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
+
+<h4 id="常用软件"><a href="#常用软件" class="headerlink" title="常用软件"></a>常用软件</h4><p>如果购买的是阿里云的服务器会发现 yum 的下载源已经配置为阿里云的源，无需自己配置，因此下载速度还可以。</p>
+<h5 id="Git"><a href="#Git" class="headerlink" title="Git"></a>Git</h5><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install <span class="literal">-y</span> git</span><br></pre></td></tr></table></figure>
+
+<h5 id="Node-和-npm"><a href="#Node-和-npm" class="headerlink" title="Node 和 npm"></a>Node 和 npm</h5><p>在<a target="_blank" rel="noopener" href="https://github.com/nodesource/distributions">官方</a>查看有哪些版本，查找自己想要的 nodejs 源，先安装源：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">curl</span> <span class="literal">-sL</span> https://rpm.nodesource.com/setup_14.x | bash -</span><br></pre></td></tr></table></figure>
+
+<p>然后安装：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum <span class="literal">-y</span> install nodejs</span><br></pre></td></tr></table></figure>
+
+<p>通过：node -v 和npm -v 查看版本，说明安装成功</p>
+<p><strong>替换为淘宝NPM镜像</strong></p>
+<p>首先我们可以查看原本的镜像地址：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm get registry</span><br><span class="line">https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+
+<p>然后替换成淘宝的：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry http://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+
+<p>如果想恢复原来的镜像地址：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+
+<p>如果用淘宝定制的 cnpm 工具来代替默认的npm：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="literal">-g</span> cnpm -<span class="literal">-registry</span>=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h5 id="Mysql"><a href="#Mysql" class="headerlink" title="Mysql"></a>Mysql</h5><p>目前安装 Mysql 不像以前麻烦了，一个命令就搞定，使用最新的包管理器安装MySQL：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dnf install @mysql</span><br></pre></td></tr></table></figure>
+
+<p>安装完成后，运行以下命令来启动MySQL服务并使它在启动时自动启动：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl enable -<span class="literal">-now</span> mysqld</span><br></pre></td></tr></table></figure>
+
+<p>要检查MySQL服务器是否正在运行，请输入：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status mysqld</span><br></pre></td></tr></table></figure>
+
+<p>运行<code>mysql_secure_installation</code>脚本，该脚本执行一些与安全性相关的操作并设置MySQL根密码：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mysql_secure_installation</span><br></pre></td></tr></table></figure>
+
+<p>步骤如下：</p>
+<ol>
+<li>要求你配置VALIDATE PASSWORD component（验证密码组件）： 输入y ，回车进入该配置<ul>
+<li>选择密码验证策略等级， 我这里选择0 （low），回车</li>
+<li>输入新密码两次</li>
+<li>确认是否继续使用提供的密码？输入y ，回车</li>
+<li>移除匿名用户？ 输入y ，回车</li>
+<li>不允许root远程登陆？ 我这里需要远程登陆，所以输入n ，回车</li>
+</ul>
+</li>
+</ol>
+<p>2.移除test数据库？ 输入y ，回车</p>
+<p>3.重新载入权限表？ 输入y ，回车</p>
+<p><strong>参考链接</strong>：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/kasnti/p/11929030.html">CentOS 8 安装MySQL 8.0</a></p>
+<h5 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a>pm2</h5><p>pm2 是一个带有负载均衡功能的 Node 应用的进程管理器，当你要把你的独立代码利用全部的服务器上的所有CPU，并保证进程永远都活着。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install <span class="literal">-g</span> pm2</span><br></pre></td></tr></table></figure>
+
+<h5 id="Nginx"><a href="#Nginx" class="headerlink" title="Nginx"></a>Nginx</h5><p>安装工具：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install yum<span class="literal">-utils</span></span><br></pre></td></tr></table></figure>
+
+<p>创建 nginx 镜像仓库：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/yum.repos.d/nginx.repo</span><br></pre></td></tr></table></figure>
+
+<p>粘贴内容：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">nginx-stable</span>]</span><br><span class="line"><span class="string">name=nginx</span> <span class="string">stable</span> <span class="string">repo</span></span><br><span class="line"><span class="string">baseurl=http://nginx.org/packages/centos/$releasever/$basearch/</span></span><br><span class="line"><span class="string">gpgcheck=1</span></span><br><span class="line"><span class="string">enabled=1</span></span><br><span class="line"><span class="string">gpgkey=https://nginx.org/keys/nginx_signing.key</span></span><br><span class="line"><span class="string">module_hotfixes=true</span></span><br><span class="line"></span><br><span class="line">[<span class="string">nginx-mainline</span>]</span><br><span class="line"><span class="string">name=nginx</span> <span class="string">mainline</span> <span class="string">repo</span></span><br><span class="line"><span class="string">baseurl=http://nginx.org/packages/mainline/centos/$releasever/$basearch/</span></span><br><span class="line"><span class="string">gpgcheck=1</span></span><br><span class="line"><span class="string">enabled=0</span></span><br><span class="line"><span class="string">gpgkey=https://nginx.org/keys/nginx_signing.key</span></span><br><span class="line"><span class="string">module_hotfixes=true</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 nginx：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo yum install nginx</span><br></pre></td></tr></table></figure>
+
+<p>其他命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable nginx // 加入开机启动</span><br><span class="line"></span><br><span class="line">systemctl <span class="built_in">start</span> nginx // 启动 nginx</span><br><span class="line"></span><br><span class="line">systemctl restart nginx // 重启 nginx</span><br><span class="line"></span><br><span class="line">systemctl stop nginx // 关闭 nginx</span><br><span class="line"></span><br><span class="line">systemctl status nginx // 查看 nginx 的状态</span><br></pre></td></tr></table></figure>
+
+<p>启动后 nginx 服务的默认端口为 80，因此可直接在浏览器通过服务器 ip 地址访问，出现欢迎页面即可。</p>
+<p><strong>配置文件</strong></p>
+<p>nginx 服务的默认配置文件在<code>vim /etc/nginx/conf.d/default.conf</code>，打开可看到，默认端口为 80，项目部署目录为<code>/usr/share/nginx/html</code>。而访问 nginx 的欢迎页面就是<code>html</code>内的<code>index.html</code>文件。</p>
+<p>因此在<code> /usr/share/nginx/html/</code>目录下上传一个文件夹<code>yuki</code>，内部新建一个<code>index.html</code>，则可以通过<code>服务器 ip/yuki</code>访问到<code>yuki</code>下的<code>index.html</code>页面。</p>
+<p>如果在与<code>html</code>同级的目录下新建一个文件夹<code>test</code>，然后想通过<code>服务器ip/test</code>访问，则需要增加配置项：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">location</span> <span class="string">/</span> &#123;</span><br><span class="line">   <span class="string">root</span>   <span class="string">/usr/share/nginx/html;</span></span><br><span class="line">   <span class="string">index</span>  <span class="string">index.html</span> <span class="string">index.htm;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">//</span> <span class="string">新增配置</span></span><br><span class="line"><span class="string">location</span> <span class="string">/test/</span> &#123;</span><br><span class="line">   <span class="string">alias</span> <span class="string">/usr/share/nginx/test/;</span></span><br><span class="line">   <span class="string">index</span> <span class="string">index.html</span> <span class="string">index.htm;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>需要注意的是不能使用 root，要使用 alias，其区别在于：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">location</span> <span class="string">/file/</span> &#123;</span><br><span class="line">    <span class="string">alias</span> <span class="string">/var/html/file;</span> <span class="comment"># 这个查找文件的路径直接是/var/html/file</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="string">location</span> <span class="string">/file/</span> &#123;</span><br><span class="line">    <span class="string">root</span> <span class="string">/var/html/file;</span> <span class="comment"># 这个查找文件的路径应该是/var/html/file/file</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yuki</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://hg2990656.github.io/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%B8%80)%20%E5%9F%9F%E5%90%8D%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/">http://hg2990656.github.io/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%B8%80)%20%E5%9F%9F%E5%90%8D%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://hg2990656.github.io" target="_blank">Yuki's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%99%E7%A8%8B/">教程</a><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%AB%99/">网站</a><a class="post-meta__tags" href="/tags/nginx/">nginx</a></div><div class="post_share"><div class="social-share" data-image="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132308.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%BA%8C)%20%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/"><img class="prev-cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132213.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">网站搭建(二) 前后端分离项目部署</div></div></a></div><div class="next-post pull-right"><a href="/2017/08/02/babel%206/"><img class="next-cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201106162605.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Babel6</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2019/11/14/网站搭建(二) 前后端分离项目部署/" title="网站搭建(二) 前后端分离项目部署"><img class="cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132213.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2019-11-14</div><div class="title">网站搭建(二) 前后端分离项目部署</div></div></a></div><div><a href="/2020/11/13/hexo 博客(一) 博客搭建/" title="hexo 博客(一) 博客搭建"><img class="cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114133345.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-13</div><div class="title">hexo 博客(一) 博客搭建</div></div></a></div><div><a href="/2020/11/13/hexo 博客(三) 博客图片/" title="hexo 博客(三) 博客图片"><img class="cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114133249.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-13</div><div class="title">hexo 博客(三) 博客图片</div></div></a></div><div><a href="/2020/11/13/hexo 博客(二) 主题配置/" title="hexo 博客(二) 主题配置"><img class="cover" src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132517.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-13</div><div class="title">hexo 博客(二) 主题配置</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/yukimatsui.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yuki</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hg2990656"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hg2990656" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:caojun2990656@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Welcome to yuki's Blog!</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D"><span class="toc-number">1.</span> <span class="toc-text">域名</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-number">1.1.</span> <span class="toc-text">域名使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E8%B4%AD%E4%B9%B0"><span class="toc-number">1.2.</span> <span class="toc-text">域名购买</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%9F%E5%90%8D%E5%A4%87%E6%A1%88"><span class="toc-number">1.3.</span> <span class="toc-text">域名备案</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">2.</span> <span class="toc-text">服务器</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%87%8D%E7%BD%AE%E5%AF%86%E7%A0%81"><span class="toc-number">2.1.</span> <span class="toc-text">重置密码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E7%BB%84"><span class="toc-number">2.2.</span> <span class="toc-text">安全组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">2.3.</span> <span class="toc-text">服务器配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95"><span class="toc-number">2.3.1.</span> <span class="toc-text">配置免密登录</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%BF%9E%E6%8E%A5%E5%BF%83%E8%B7%B3"><span class="toc-number">2.3.2.</span> <span class="toc-text">配置连接心跳</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.3.3.</span> <span class="toc-text">常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Git"><span class="toc-number">2.3.3.1.</span> <span class="toc-text">Git</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Node-%E5%92%8C-npm"><span class="toc-number">2.3.3.2.</span> <span class="toc-text">Node 和 npm</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Mysql"><span class="toc-number">2.3.3.3.</span> <span class="toc-text">Mysql</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#pm2"><span class="toc-number">2.3.3.4.</span> <span class="toc-text">pm2</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Nginx"><span class="toc-number">2.3.3.5.</span> <span class="toc-text">Nginx</span></a></li></ol></li></ol></li></ol></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%B8%89)%20%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/" title="hexo 博客(三) 博客图片"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114133249.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo 博客(三) 博客图片"/></a><div class="content"><a class="title" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%B8%89)%20%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/" title="hexo 博客(三) 博客图片">hexo 博客(三) 博客图片</a><time datetime="2020-11-13T06:20:32.000Z" title="发表于 2020-11-13 14:20:32">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="hexo 博客(二) 主题配置"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132517.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo 博客(二) 主题配置"/></a><div class="content"><a class="title" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%BA%8C)%20%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE/" title="hexo 博客(二) 主题配置">hexo 博客(二) 主题配置</a><time datetime="2020-11-13T06:20:32.000Z" title="发表于 2020-11-13 14:20:32">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%B8%80)%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo 博客(一) 博客搭建"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114133345.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo 博客(一) 博客搭建"/></a><div class="content"><a class="title" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%B8%80)%20%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" title="hexo 博客(一) 博客搭建">hexo 博客(一) 博客搭建</a><time datetime="2020-11-13T01:20:32.000Z" title="发表于 2020-11-13 09:20:32">2020-11-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/12/Github%E4%BB%93%E5%BA%93%E6%94%B6%E8%97%8F/" title="Github 仓库收藏"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132403.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github 仓库收藏"/></a><div class="content"><a class="title" href="/2020/11/12/Github%E4%BB%93%E5%BA%93%E6%94%B6%E8%97%8F/" title="Github 仓库收藏">Github 仓库收藏</a><time datetime="2020-11-12T06:20:32.000Z" title="发表于 2020-11-12 14:20:32">2020-11-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%BA%8C)%20%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" title="网站搭建(二) 前后端分离项目部署"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114132213.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="网站搭建(二) 前后端分离项目部署"/></a><div class="content"><a class="title" href="/2019/11/14/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA(%E4%BA%8C)%20%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2/" title="网站搭建(二) 前后端分离项目部署">网站搭建(二) 前后端分离项目部署</a><time datetime="2019-11-14T03:17:32.000Z" title="发表于 2019-11-14 11:17:32">2019-11-14</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 By Yuki</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="#">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script></div></body></html>
