@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>吉他乐理(二) 和弦推导 | Yuki's Blog</title><meta name="keywords" content="乐理"><meta name="author" content="Yuki"><meta name="copyright" content="Yuki"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><meta name="description" content="和弦是学习吉他的一个关键，大多数的爱好者（例如我）在初期学习吉他时都是通过记忆和弦指型来演奏歌曲，也就是记型不记音，对于和弦的原理也不够清楚，不清楚为什么和弦要那样按，除了这种按法还有哪些按法，这也是吉他学习中的一个瓶颈。其实有更简单的方法帮助我们在吉他指板上推导出任意和弦，需要的理论知识包括三点：（1）吉他指板的音程关系；（2）和弦音的构成；（3）调。 吉他指板标准调弦吉他有六根弦，一般除非指弹">
+<meta property="og:type" content="article">
+<meta property="og:title" content="吉他乐理(二) 和弦推导">
+<meta property="og:url" content="http://hg2990656.github.io/2020/12/05/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%BA%8C)%20%E5%92%8C%E5%BC%A6%E6%8E%A8%E5%AF%BC/index.html">
+<meta property="og:site_name" content="Yuki&#39;s Blog">
+<meta property="og:description" content="和弦是学习吉他的一个关键，大多数的爱好者（例如我）在初期学习吉他时都是通过记忆和弦指型来演奏歌曲，也就是记型不记音，对于和弦的原理也不够清楚，不清楚为什么和弦要那样按，除了这种按法还有哪些按法，这也是吉他学习中的一个瓶颈。其实有更简单的方法帮助我们在吉他指板上推导出任意和弦，需要的理论知识包括三点：（1）吉他指板的音程关系；（2）和弦音的构成；（3）调。 吉他指板标准调弦吉他有六根弦，一般除非指弹">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://qiniu.yukicj.com/picGo/20201205143055.jpg">
+<meta property="article:published_time" content="2020-12-05T06:31:32.000Z">
+<meta property="article:modified_time" content="2020-12-05T06:46:08.393Z">
+<meta property="article:author" content="Yuki">
+<meta property="article:tag" content="乐理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://qiniu.yukicj.com/picGo/20201205143055.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://hg2990656.github.io/2020/12/05/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%BA%8C)%20%E5%92%8C%E5%BC%A6%E6%8E%A8%E5%AF%BC/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  ClickShowText: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  justifiedGallery: {
+    js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+    css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isanchor: false
+};
+
+var saveToLocal = {
+  set: function setWithExpiry(key, value, ttl) {
+    const now = new Date()
+    const expiryDay = ttl * 86400000
+    const item = {
+      value: value,
+      expiry: now.getTime() + expiryDay,
+    }
+    localStorage.setItem(key, JSON.stringify(item))
+  },
+
+  get: function getWithExpiry(key) {
+    const itemStr = localStorage.getItem(key)
+
+    if (!itemStr) {
+      return undefined
+    }
+    const item = JSON.parse(itemStr)
+    const now = new Date()
+
+    if (now.getTime() > item.expiry) {
+      localStorage.removeItem(key)
+      return undefined
+    }
+    return item.value
+  }
+}</script><script id="config_change">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2020-12-05 14:46:08'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(function () {  window.activateDarkMode = function () {
+    document.documentElement.setAttribute('data-theme', 'dark')
+    if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+    }
+  }
+  window.activateLightMode = function () {
+    document.documentElement.setAttribute('data-theme', 'light')
+   if (document.querySelector('meta[name="theme-color"]') !== null) {
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+    }
+  }
+  const autoChangeMode = 'false'
+  const t = saveToLocal.get('theme')
+  if (autoChangeMode === '1') {
+    const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+    const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+    const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+    const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+    if (t === undefined) {
+      if (isLightMode) activateLightMode()
+      else if (isDarkMode) activateDarkMode()
+      else if (isNotSpecified || hasNoSupport) {
+        const now = new Date()
+        const hour = now.getHours()
+        const isNight = hour <= 6 || hour >= 18
+        isNight ? activateDarkMode() : activateLightMode()
+      }
+      window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+        if (saveToLocal.get('theme') === undefined) {
+          e.matches ? activateDarkMode() : activateLightMode()
+        }
+      })
+    } else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else if (autoChangeMode === '2') {
+    const now = new Date()
+    const hour = now.getHours()
+    const isNight = hour <= 6 || hour >= 18
+    if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
+    else if (t === 'light') activateLightMode()
+    else activateDarkMode()
+  } else {
+    if (t === 'dark') activateDarkMode()
+    else if (t === 'light') activateLightMode()
+  }const asideStatus = saveToLocal.get('aside-status')
+if (asideStatus !== undefined) {
+   if (asideStatus === 'hide') {
+     document.documentElement.classList.add('hide-aside')
+   } else {
+     document.documentElement.classList.remove('hide-aside')
+   }
+}})()</script><meta name="generator" content="Hexo 5.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="/img/yukimatsui.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(http://qiniu.yukicj.com/picGo/20201205143055.jpg)"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Yuki's Blog</a></span><span id="menus"><div id="search_button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><span class="close" id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></span></span></nav><div id="post-info"><h1 class="post-title">吉他乐理(二) 和弦推导</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-12-05T06:31:32.000Z" title="发表于 2020-12-05 14:31:32">2020-12-05</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2020-12-05T06:46:08.393Z" title="更新于 2020-12-05 14:46:08">2020-12-05</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%90%89%E4%BB%96/">吉他</a></span></div><div class="meta-secondline"> <span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">3.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>和弦是学习吉他的一个关键，大多数的爱好者（例如我）在初期学习吉他时都是通过记忆和弦指型来演奏歌曲，也就是记型不记音，对于和弦的原理也不够清楚，不清楚为什么和弦要那样按，除了这种按法还有哪些按法，这也是吉他学习中的一个瓶颈。其实有更简单的方法帮助我们在吉他指板上推导出任意和弦，需要的理论知识包括三点：（1）吉他指板的音程关系；（2）和弦音的构成；（3）调。</p>
+<h2 id="吉他指板"><a href="#吉他指板" class="headerlink" title="吉他指板"></a>吉他指板</h2><h3 id="标准调弦"><a href="#标准调弦" class="headerlink" title="标准调弦"></a>标准调弦</h3><p>吉他有六根弦，一般除非指弹的特殊调弦外，大多数的弹唱爱好者用到的都是标准调弦，从六弦到一弦的音分别为E、A、D、G、B、E，之所以是这六个音作为标准调弦的音和我们的手指构成有关。</p>
+<p>我们可以发现从六弦到一弦，音程分别为纯四度、纯四度、纯四度、大三度、纯四度。除了三弦和二弦是大三度外，其他相邻琴弦之间都是纯四度，利用这个关系我们可以快速的推算出相邻琴弦的音。</p>
+<h3 id="指板音程"><a href="#指板音程" class="headerlink" title="指板音程"></a>指板音程</h3><p>从每根琴弦的空弦音开始，按照全半音关系可以推算出指板上所有的音。</p>
+<p><img src="/Users/caojun/Downloads/timg.jpeg" alt="timg"></p>
+<p>以六线谱为例，对应的视角是从上往下是一弦到六弦，其中包含很多规律：</p>
+<ul>
+<li>六弦上的任意一个音，与其正上方在五弦的音为纯四度关系，例如六弦 3 品为 G，则五弦 3 品为 C（G A B C），纯四度为二又二分之个全音，即两个全音加一个半音。</li>
+<li>以五弦的 3 品音为基础继续往上找，四弦的 3 品音为 F，六弦三品和四弦三品音程为七度音，因此六弦三品 G 的八度音为四弦的五品，即四弦三品向右移两品得到八度音 G。若以四弦的音开始向上找八度音，则会不同，因为三弦和二弦之间为大三度，所以此时在二弦上需要向右移三品，例如：四弦三品的 F，对应二弦的八度音为二弦六品，同理以三弦上的音为基础向上找一弦上的八度音时，也是如此。</li>
+<li>根据这种规律，我们可以发现只要记住了六弦和五弦上的音，我们就可以快速得到四弦和三弦的音，得到四弦的音，我们就可以推导二弦的音，而一弦和六弦的音组成是一样的，因此记忆指板利用这种方法只需记住六弦和五弦的音即可。</li>
+</ul>
+<h2 id="和弦音构成"><a href="#和弦音构成" class="headerlink" title="和弦音构成"></a>和弦音构成</h2><p>和弦是有三个及三个以上的音按照一定的音程关系构成的一组音。因此在指板上推导和弦时，首先要知道这个和弦的组成音。</p>
+<p>对于不同的调，组成调式的和弦也不相同，但都满足一级、四级、五级和弦是大三和弦、二级、三级、六级是小三和弦，七级和弦是减三和弦的特性。</p>
+<p>在每个调中的一级和弦就是对应调名的和弦，例如 C 大调一级和弦就是 C 大三和弦，以 C 为根音，唱作 1，bE 调的一级和弦就是 bE 和弦，以 bE 作为根音，唱作 1。不同的调的第一个音都唱做 1，这是首调思维的优点，通过这个特性，我们知道一级和弦的组成音是 1，3，5，那么我们以 bE 作为根音，作为 1，在指板上找到它的1、3、5音即可得到 bE 和弦。</p>
+<p>由于每一个和弦都会有不同的按法，可以从根音在某一弦上进行分类，除根音外的音肯定只能往上找，因为和弦根音是最低音。因此可以考虑分成几种情况，根音在六弦，根音在五弦（此时六弦不弹响），根音在四弦（五弦六弦不弹），根音在三弦也是可以的，但是由于和弦至少包含三个音，那就是说这三个弦刚好构成三和弦的组成音，从和弦色彩上不够饱满。</p>
+<h2 id="六弦为根"><a href="#六弦为根" class="headerlink" title="六弦为根"></a>六弦为根</h2><p>![image-20201205124954336](/Users/caojun/Library/Application Support/typora-user-images/image-20201205124954336.png)</p>
+<h3 id="X-大三和弦"><a href="#X-大三和弦" class="headerlink" title="X 大三和弦"></a>X 大三和弦</h3><p>以六弦上任意一品的音 X 为根音，看作 1，我们推导出以 X 为 1 的 1，3，5音，就得到了 X 大三和弦，这个 X 叫什么，那就是什么和弦，例如 X = bE，那这个和弦就是 bE 大三和弦。</p>
+<p>（1）向右找</p>
+<p>六弦任意品 X = .1，则向上找五弦为 4，向右找两品为 5，再向上找为 1，1的上方为 4，因此向左一品为 3，再向左一品为 b3，b3 的大三度为 5，因此 b3 上方二弦为 5，5 的上方为 1。</p>
+<p>至此我们找到了六根弦上以 X 音为根音的大三和弦组成音，食指大横按 X 所在的品，中指按三弦，无名指五弦，小指四弦。神奇的是，这其实就是初学者熟悉的 F 和弦的指型，只不过现在是 X 和弦而已。回想一下，F 和弦是横按一品，六弦一品就是 F，此时 X = F，所以这种按法就是 F 和弦。通过这种指法我们可以在指板上任意滑动得到 X 和弦，得到的和弦名称只跟 X 的音有关，无需再去变换指法。</p>
+<p>按照正常的思维，我们推导 F 和弦的按法，可能会习惯以 C 调为基础，在 C 调中 F = 4，F 和弦的组成音为 F = 4，A = 6，C = 1。然后我们去指板上找 F，A，C 这三个音。</p>
+<p>这种推导方法的优点在于使用了首调式的思维进行推导，推导 X 和弦那就是推导 X 调的一级和弦，X 为根音，X = 1，因此其组成音就是1，3，5，至于组成音的位置我们通过调弦的特性和指板的音程关系就可以推算出来，而且无需变化！</p>
+<p>（2）向左找</p>
+<p>![image-20201205124954336](/Users/caojun/Library/Application Support/typora-user-images/image-20201205124954336.png)</p>
+<p>以 X 为根音 1 ，设品位为 Y，向左上方找，我们可以知道五弦 Y 品位为 4，Y - 1品为 3，Y - 2 品为 b3，四弦 Y - 3 品为 5，三弦 Y - 3 品为 1，二弦 Y - 3 品为 3， 一弦 Y 品为 1。</p>
+<p>除去 Y - 3 品的三个音的大横按，我们可以发现这就是个 G 和弦的按法，当 X = G 时，Y = 3，Y - 3 = 0，所以刚好不用大横按，因此就得到了 G 和弦。</p>
+<h3 id="X-小三和弦"><a href="#X-小三和弦" class="headerlink" title="X 小三和弦"></a>X 小三和弦</h3><p>现在我们很快就能得到任意的 X 大三和弦，只要你能记住六弦上的音，那么推算小三和弦就很简单了，其不同之处就是将三音 3 降半音得到 b3，图中用绿色标注的即是 b3，因此指法的改变就是将中指松开就行，这样就得到了 X 小三和弦，然后就会发现除去大横按，这不就是 Em 和弦的指型么，回想 Em 和弦的按法，按住四五弦的二品，此时 X = 六弦空弦音 E，原来 Em 和弦就是这样来的。</p>
+<h3 id="X-七和弦"><a href="#X-七和弦" class="headerlink" title="X 七和弦"></a>X 七和弦</h3><p>在上述基础上继续改变构成音我们就能得到七和弦，以大三和弦为基础可以构成大大七和弦，大小七和弦，大大七和弦即1，3，5，7，大小七和弦即1，3，5，b7，因此我们想办法将其中一个音变为 7 或者 b7 就得到了 X 七和弦。</p>
+<p>这六根弦的音中，六弦的根音不能变，五弦的 5 可以变，但是要变为 7 或者 b7 需要向右移动三个品位或四个品位，超出手指的范围，四弦的 1 可以变，而且只需向左移 1 个品位得到 7：</p>
+<p>![image-20201205132249248](/Users/caojun/Library/Application Support/typora-user-images/image-20201205132249248.png)</p>
+<p>只需在 X 所在品位大横按，中指四弦，无名指三弦，小指五弦，即可得到 X 大七和弦。将四弦的中指松开，即得到了 X 属七和弦。</p>
+<p>同理，X 小大七和弦和 X 小小七和弦就是在 X 小三和弦的基础上同样的推导，指法更简单。</p>
+<h2 id="五弦为根"><a href="#五弦为根" class="headerlink" title="五弦为根"></a>五弦为根</h2><p>![image-20201205133057164](/Users/caojun/Library/Application Support/typora-user-images/image-20201205133057164.png)</p>
+<p>以五弦上的任意一个音记为 X，作为根音快速推导 X 三和弦、七和弦。</p>
+<h3 id="X-大三和弦-1"><a href="#X-大三和弦-1" class="headerlink" title="X 大三和弦"></a>X 大三和弦</h3><p>（1）向右找</p>
+<p>将 X 作为根音，设品位为 Y，看作 1，向上找其大三和弦的组成音1，3，5。根据弦之间的纯四度和大三度关系，我们可以得到几个组成音：四弦的 Y + 2 品音 5，三弦的 Y + 2 品音为 1，这个和六弦为根中相同，因为这三根弦之间都是纯四度，而三弦和二弦是大三度，因此此时得到二弦的 Y + 2 品为 3，一弦 Y 品为 5，有这些音构成了 X 大三和弦。</p>
+<p>这个 X 大三和弦的好像又有点相似，除去 Y 品的大横按，这个指法就是熟悉的 A 和弦，即按住二三四弦的二品，以五弦空弦音作为根音的 A 和弦，而五弦空弦音是啥？恰好就是 A，因此 A 和弦就是那样按。</p>
+<p>通过这种指型，我们又可以在五弦上滑动调整 X，指型不变即可得到对应的 X 大三和弦。</p>
+<p>同理，X 小三和弦就需要将二弦的 3 变为 b3，然后你会发现除去大横按这不就是 Am 和弦的指法了，只不过恰好五弦空弦音是 A，我们没有用到大横按而已。</p>
+<p>X 七和弦的推导方法与六弦为根的方法相同，将三弦的 1 变为 7 和 b7 即可。</p>
+<p>（2）向左找</p>
+<p>![image-20201205133057164](/Users/caojun/Library/Application Support/typora-user-images/image-20201205133057164.png)</p>
+<p>以 X 为根音，设品位为 Y，向左上方找，我们可以得到四弦 Y - 1 品为 3，Y - 2 品为 b3，三弦 Y - 3 品为 5，二弦 Y - 2 品为 1，一弦 Y - 3 品为 3。又可以发现将大横按的 Y - 3 品去除，或者将其看作第 0 品，则这就是一个熟悉的 C 和弦的指型。</p>
+<h2 id="四弦为根"><a href="#四弦为根" class="headerlink" title="四弦为根"></a>四弦为根</h2><p>![image-20201205135042191](/Users/caojun/Library/Application Support/typora-user-images/image-20201205135042191.png)</p>
+<p>(1) 向右上方找</p>
+<p>以四弦上的任意一个音为根音，记为 X，看作 1，快速推导其三和弦和七和弦。</p>
+<p>以四弦 X 音为根音 1，品位设为 Y 品，根据纯四度关系得到 三弦  Y + 2 品为 5，三弦和二弦为大三度，因此得到二弦的 Y + 3 品为 1，一弦 Y + 3 品为 4，Y + 2 品为 3，由此得到了 X 大三和弦的组成音位置。然后会发现除去 Y 品的大横按，指法就是 D 和弦的按法，而我们熟悉的 D 和弦就是以四弦为根音的这种按法，四弦空弦音恰好就是 D！将一弦的 3 降半音得到 b3，构成了 X 小三和弦，这恰好就是 Dm 和弦的指法！</p>
+<p>通过这种指型，我们又可以在四弦上滑动以任意音为根音即可得到 X 三和弦，七和弦。</p>
+<h2 id="三弦为根"><a href="#三弦为根" class="headerlink" title="三弦为根"></a>三弦为根</h2><p>![image-20201205144507715](/Users/caojun/Library/Application Support/typora-user-images/image-20201205144507715.png)</p>
+<p>由于以三弦为根时，每一根弦都只能是和弦组成音，而且只有三个音，因此这种和弦指法很少见，但从理论上这两种按法也是对的。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，我们知道了熟悉的 C 大调第一把位上的和弦为什么会那样按，因为根音所在弦不同：</p>
+<p>以六弦为根向右上方找，我们得到了 F 指型的 X 和弦，向左上方找我们得到了 G 指型的 X 和弦。</p>
+<p>从五弦为根向右上方找，我们得到了 A 指型的 X 和弦，向左上方找我们得到了 C 指型的 X 指型。</p>
+<p>从四弦为根向右上方找，我们得到了 D 指型的 X 和弦。</p>
+<p>将 X 替换为我们想要得到的和弦音名，使用任意一种指型就可以得到 X 大三和弦，只需将 3 音降半音就得到了 X 小三和弦，将非最低音的 1 替换为 b7 或 7 即可得到了 X 七和弦。</p>
+<p>这些不同的指型得到的都是 X 和弦，其区别就在于和弦的根音位置是在哪一弦，而在每一弦上同一个音又会有多个位置，因此又可以衍生出成百上千的在不同把位上的 X 和弦。</p>
+<p>因此当别人询问我们任意一个 X 和弦时，我们都可以通过这几个步骤快速推导出来 ：</p>
+<p>（1）决定自己要以几弦为根音，记为 S 弦</p>
+<p>（2）决定使用向右上方查找的指法还是向左上方查找的指法，此时可以确定指型为 T</p>
+<p>（3）根据自己记忆的五弦和六弦的音，快速推导 X 音在 S 弦上的所在位置</p>
+<p>（4）以 X 音为根音用 T 指型就可以得到 X 大三和弦</p>
+<p>（5）如果 X 和弦是小三和弦，则将按 3 的手指左移一品</p>
+<p>（6）如果 X 和弦是七和弦，则将按 1 的手指向左移一品或者两品</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">Yuki</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://hg2990656.github.io/2020/12/05/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%BA%8C)%20%E5%92%8C%E5%BC%A6%E6%8E%A8%E5%AF%BC/">http://hg2990656.github.io/2020/12/05/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%BA%8C)%20%E5%92%8C%E5%BC%A6%E6%8E%A8%E5%AF%BC/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://hg2990656.github.io" target="_blank">Yuki's Blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E4%B9%90%E7%90%86/">乐理</a></div><div class="post_share"><div class="social-share" data-image="http://qiniu.yukicj.com/picGo/20201205143055.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/01/06/Babel%207/"><img class="prev-cover" src="http://qiniu.yukicj.com/picGo/20210107153820.jpg" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">Babel 7</div></div></a></div><div class="next-post pull-right"><a href="/2020/11/28/Guitar%20Pro%207%20%E4%BD%BF%E7%94%A8/"><img class="next-cover" src="http://qiniu.yukicj.com/picGo/20201128151907.png" onerror="onerror=null;src='/img/404.jpg'"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Guitar Pro 7 使用</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span> 相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/11/28/吉他乐理(一) 和弦/" title="吉他乐理(一) 和弦"><img class="cover" src="http://qiniu.yukicj.com/picGo/20201128144516.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-11-28</div><div class="title">吉他乐理(一) 和弦</div></div></a></div></div></div></div><div class="aside_content" id="aside_content"><div class="card-widget card-info"><div class="card-content"><div class="card-info-avatar is-center"><img class="avatar-img" src="/img/yukimatsui.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/><div class="author-info__name">Yuki</div><div class="author-info__description"></div></div><div class="card-info-data"><div class="card-info-data-item is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a></div><div class="card-info-data-item is-center"><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div></div><a class="button--animated" id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/hg2990656"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/hg2990656" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:caojun2990656@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div></div><div class="card-widget card-announcement"><div class="card-content"><div class="item-headline"><i class="fas fa-bullhorn card-announcement-animation"></i><span>公告</span></div><div class="announcement_content">Welcome to yuki's Blog!</div></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="card-content"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%89%E4%BB%96%E6%8C%87%E6%9D%BF"><span class="toc-number">1.</span> <span class="toc-text">吉他指板</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E5%87%86%E8%B0%83%E5%BC%A6"><span class="toc-number">1.1.</span> <span class="toc-text">标准调弦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8C%87%E6%9D%BF%E9%9F%B3%E7%A8%8B"><span class="toc-number">1.2.</span> <span class="toc-text">指板音程</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%92%8C%E5%BC%A6%E9%9F%B3%E6%9E%84%E6%88%90"><span class="toc-number">2.</span> <span class="toc-text">和弦音构成</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E5%BC%A6%E4%B8%BA%E6%A0%B9"><span class="toc-number">3.</span> <span class="toc-text">六弦为根</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#X-%E5%A4%A7%E4%B8%89%E5%92%8C%E5%BC%A6"><span class="toc-number">3.1.</span> <span class="toc-text">X 大三和弦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#X-%E5%B0%8F%E4%B8%89%E5%92%8C%E5%BC%A6"><span class="toc-number">3.2.</span> <span class="toc-text">X 小三和弦</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#X-%E4%B8%83%E5%92%8C%E5%BC%A6"><span class="toc-number">3.3.</span> <span class="toc-text">X 七和弦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E5%BC%A6%E4%B8%BA%E6%A0%B9"><span class="toc-number">4.</span> <span class="toc-text">五弦为根</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#X-%E5%A4%A7%E4%B8%89%E5%92%8C%E5%BC%A6-1"><span class="toc-number">4.1.</span> <span class="toc-text">X 大三和弦</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E5%BC%A6%E4%B8%BA%E6%A0%B9"><span class="toc-number">5.</span> <span class="toc-text">四弦为根</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E5%BC%A6%E4%B8%BA%E6%A0%B9"><span class="toc-number">6.</span> <span class="toc-text">三弦为根</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">7.</span> <span class="toc-text">总结</span></a></li></ol></div></div></div><div class="card-widget card-recent-post"><div class="card-content"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2021/01/06/Babel%207/" title="Babel 7"><img src="http://qiniu.yukicj.com/picGo/20210107153820.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Babel 7"/></a><div class="content"><a class="title" href="/2021/01/06/Babel%207/" title="Babel 7">Babel 7</a><time datetime="2021-01-06T05:39:32.000Z" title="发表于 2021-01-06 13:39:32">2021-01-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/12/05/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%BA%8C)%20%E5%92%8C%E5%BC%A6%E6%8E%A8%E5%AF%BC/" title="吉他乐理(二) 和弦推导"><img src="http://qiniu.yukicj.com/picGo/20201205143055.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="吉他乐理(二) 和弦推导"/></a><div class="content"><a class="title" href="/2020/12/05/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%BA%8C)%20%E5%92%8C%E5%BC%A6%E6%8E%A8%E5%AF%BC/" title="吉他乐理(二) 和弦推导">吉他乐理(二) 和弦推导</a><time datetime="2020-12-05T06:31:32.000Z" title="发表于 2020-12-05 14:31:32">2020-12-05</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/28/Guitar%20Pro%207%20%E4%BD%BF%E7%94%A8/" title="Guitar Pro 7 使用"><img src="http://qiniu.yukicj.com/picGo/20201128151907.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Guitar Pro 7 使用"/></a><div class="content"><a class="title" href="/2020/11/28/Guitar%20Pro%207%20%E4%BD%BF%E7%94%A8/" title="Guitar Pro 7 使用">Guitar Pro 7 使用</a><time datetime="2020-11-28T07:20:32.000Z" title="发表于 2020-11-28 15:20:32">2020-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/28/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%B8%80)%20%E5%92%8C%E5%BC%A6/" title="吉他乐理(一) 和弦"><img src="http://qiniu.yukicj.com/picGo/20201128144516.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="吉他乐理(一) 和弦"/></a><div class="content"><a class="title" href="/2020/11/28/%E5%90%89%E4%BB%96%E4%B9%90%E7%90%86(%E4%B8%80)%20%E5%92%8C%E5%BC%A6/" title="吉他乐理(一) 和弦">吉他乐理(一) 和弦</a><time datetime="2020-11-28T06:20:32.000Z" title="发表于 2020-11-28 14:20:32">2020-11-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%B8%89)%20%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/" title="hexo 博客(三) 博客图片"><img src="http://qjd3t88bg.hn-bkt.clouddn.com/picGo/20201114133249.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="hexo 博客(三) 博客图片"/></a><div class="content"><a class="title" href="/2020/11/13/hexo%20%E5%8D%9A%E5%AE%A2(%E4%B8%89)%20%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/" title="hexo 博客(三) 博客图片">hexo 博客(三) 博客图片</a><time datetime="2020-11-13T06:20:32.000Z" title="发表于 2020-11-13 14:20:32">2020-11-13</time></div></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2021 By Yuki</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">Hi, welcome to my <a href="#">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div></div><hr/><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1/dist/fireworks.min.js"></script></div></body></html>
